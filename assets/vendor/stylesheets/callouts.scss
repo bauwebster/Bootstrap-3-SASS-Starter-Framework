@@ -1,0 +1,46 @@
+.callout {
+    padding:20px;
+    margin:20px 0;
+    border:1px solid lighten($gray-lighter,10%);
+    border-left-width:5px;
+    border-radius:3px;
+
+    h4 {
+      margin-top:0;
+      margin-bottom:5px;
+    }
+    p:last-child {
+      margin-bottom:0;
+    }
+
+    .callout code {
+      border-radius:3px;
+    }
+    + .callout {
+      margin-top:-5px
+    }
+  }
+
+  .callout-error {
+    border-left-color: $callout-danger-border;
+    background-color: $callout-danger-bg;
+    h4 {
+      color: $callout-danger-text
+    }
+  }
+
+  .callout-warning {
+    border-left-color: $callout-warning-border;
+    background-color: $callout-warning-bg;
+    h4 {
+      color: $callout-warning-text;
+    }
+  }
+
+  .callout-info {
+    border-left-color:$callout-info-border;
+    background-color:$callout-info-bg;
+    h4 {
+      color:$callout-info-text;
+    }
+  }

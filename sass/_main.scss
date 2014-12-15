@@ -1,0 +1,109 @@
+//
+// Load core variables and mixins
+// --------------------------------------------------
+@import "bootstrap-vendor";
+
+body {
+	font-weight: 400;
+	font-style: normal;
+	-webkit-font-smoothing:antialiased; /* Antialiased font for great smoothing */
+	-moz-font-smoothing:antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-o-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility; /* Optimise legibility for some CSS3 kerning */
+	-webkit-text-size-adjust: 100%;
+	position: relative;
+  @include clearfix();
+  background-color: white;
+}
+
+@mixin container() {
+  @include container-fixed();
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+
+//=======================
+// Site Header Styles
+//=======================
+
+#header-wrapper {
+  background: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/rough_diagonal.png') repeat top left $gray-lighter;
+  @include clearfix();
+  min-height: 500px; // Desktop Height
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    min-height: 300px; // Tablet Landscape Height
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    min-height: 150px; // Tablet Portrait Height
+  }
+  @media (max-width: $screen-sm-min) {
+    min-height: 120px; // Phone Height
+  }
+} // #header-wrapper
+
+#site-main-navigation {
+  border:none;
+} // #site-main-navigation
+
+#site-header {
+   @include container();
+
+} // #site-header
+
+
+//=======================
+// Site Header Styles
+//=======================
+
+#site-content {
+ @include container();
+  background-color: white;
+  min-height: 300px;
+
+  article {
+    @include make-row();
+    @include clearfix();
+  } // article
+
+} // #site-content
+
+
+
+//=======================
+// Site Footer Styles
+//=======================
+#footer-wrapper {
+  background-color: $gray-lighter;
+  @include clearfix();
+} // #footer-wrapper
+
+#site-footer {
+  @include container();
+  height: 110px;
+
+  > section {
+    @include make-row();
+    @include clearfix();
+
+    .footer-brand {
+      @include make-sm-column(12);
+      line-height: 110px;
+      font-size: $font-size-small;
+      color: $text-color;
+    } // .footer-brand
+
+  } // .content-footer
+
+} // #site-footer

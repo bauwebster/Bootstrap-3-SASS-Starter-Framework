@@ -1,0 +1,52 @@
+.btn,
+div.active,
+a {
+	&:focus {
+		outline:dotted 1px black;
+	}
+}
+.close,
+.nav>li>a {
+	&:hover,
+	&:focus {
+		outline:dotted 1px black;
+	}
+}
+.carousel-inner {
+	>.item {
+		position:absolute;
+		top:-999999em;
+		display:block;
+		-webkit-transition:0.6s ease-in-out left;
+		-moz-transition:0.6s ease-in-out left;
+		-o-transition:0.6s ease-in-out left;
+		transition:0.6s ease-in-out left
+	}
+	>.active {
+		position:relative;
+		top:0;
+	}
+	>.next,
+	>.prev {
+		position:absolute;
+		top:0;
+		width:100%;
+	}
+
+}
+.alert-success {
+	color:$alert-success-text;
+}
+.alert-info {
+	color:$alert-info-text;
+}
+.alert-warning {
+	color:$alert-warning-text;
+	background-color:$alert-warning-bg;
+}
+.alert-danger {
+	color:$alert-danger-text;
+	&:hover {
+		color:darken($alert-danger-text, 20%);
+	}
+}
