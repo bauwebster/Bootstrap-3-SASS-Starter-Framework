@@ -1,4 +1,4 @@
-Baustein Bootstrap Less Starter Framework
+Baustein Bootstrap SASS Starter Framework
 =========================================
 
-This is a Bootstrap3 with LESS starter framework created by Baustein Strategic Design Group Inc.
+This is a close-to-semantic Bootstrap3 with SASS starter framework created by Baustein Strategic Design Group Inc.
