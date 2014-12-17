@@ -13,7 +13,6 @@ body {
 	font-smoothing:antialiased;
 	text-rendering:optimizeLegibility; /* Optimise legibility for some CSS3 kerning */
 	-webkit-text-size-adjust: 100%;
-	position: relative;
   @include clearfix();
   background-color: white;
 }
